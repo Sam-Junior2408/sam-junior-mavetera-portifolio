@@ -28,13 +28,3 @@ const Navbar = () => {
 }
 
 export default Navbar
-
- {/* {[
-        ['About' , '#about'],
-        ['Skills' , '#skills'],
-        ['Projects' , '#projects'],
-        ['Testimonials' , '#testimonials'],
-        ['Contact' , '#contact']
-    ].map(([title, href]) => (
-              <Link key={title} to={href}>{title}</Link>
-            ))} */}
