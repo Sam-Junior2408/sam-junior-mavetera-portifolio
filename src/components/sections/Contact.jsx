@@ -32,7 +32,7 @@ const Contact = () => {
                             <li>
                                  <img src={whatsapp} alt="" className='h-7 w-7 inline mr-1'/>
 
-                                <a href="https://wa.me/263788166214" target="_blank" className="hover:text-cyan-400">WhatsApp Chat</a></li>
+                                <a href="https://wa.me/263788166214" target="_blank" className="hover:text-cyan-400">+263 788 166 214</a></li>
                             <li>
                                  <img src={mail} alt="" className='h-7 w-7 inline mr-1'/>
 

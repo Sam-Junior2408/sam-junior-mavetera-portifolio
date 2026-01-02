@@ -2,6 +2,8 @@ import React from 'react'
 import githubIcon from '../../assets/github.png'
 import bitBucketIcon from '../../assets/bitbucket.png'
 import navigateIcon from '../../assets/navigate.png'
+import blogsphere from '../../assets/blogsphere.png'
+
 
 
 
@@ -11,7 +13,7 @@ const Projects = () => {
         <h2 className='text-3xl font-bold text-white'>Featured Projects</h2>
         <div className='mt-10 grid md:grid-cols-2 gap-10 items-start'>
             <div className="rounded-xl bg-gradient-to-br from-cyan-500 to-purple-600 p-4 hover:scale-105 transition transform duration-300">
-                <img src="blog_project.png" alt="BlogSphere" className="rounded-lg mb-4" />
+                <img src={blogsphere} alt="BlogSphere" className="rounded-lg mb-4" />
                 <h3 className="text-2xl font-semibold text-white">BlogSphere</h3>
                 <p className="mt-2 text-gray-200">Full-stack blogging platform with JWT auth, image uploads, comments, and RESTful APIs.</p>
                 <div className="mt-4 flex gap-3 flex-wrap">
