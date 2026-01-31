@@ -4,6 +4,8 @@ import bitBucketIcon from '../../assets/bitbucket.png'
 import navigateIcon from '../../assets/navigate.png'
 import blogsphere from '../../assets/blogsphere.png'
 import portfolio from '../../assets/portfolio.png'
+import crud from '../../assets/crud.png'
+
 
 import { ExternalLink } from 'lucide-react'
 
@@ -12,7 +14,8 @@ import { ExternalLink } from 'lucide-react'
 const Projects = () => {
     const projectImages = {
         'blogsphere.png':blogsphere,
-        'portfolio.png':portfolio
+        'portfolio.png':portfolio,
+        'crud.png': crud
     };
     const projectData =[
         {
@@ -32,7 +35,7 @@ const Projects = () => {
             id:2,
             name:'Employee CRUD Management System',
             description:'A full-stack CRUD application for managing employee records with a Spring Boot backend and a React frontend.',
-            image:'',
+            image:'crud.png',
             technologies: ['Spring Boot', 'React', 'Tailwind CSS', 'MYSQL', 'REST API'],
             links:{
                 live:'https://employee-crud-management-system-ui.vercel.app/',
