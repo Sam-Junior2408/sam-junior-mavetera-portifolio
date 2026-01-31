@@ -9,7 +9,6 @@ import whatsapp from '../../assets/whatsapp.png'
 import linkedin from '../../assets/linkedin.png'
 
 
-
 const Contact = () => {
 
   return (
@@ -51,7 +50,7 @@ const Contact = () => {
                                  <img src={bitBucketIcon} alt="" className='h-7 w-7 inline mr-1'/>
                                 Bitbucket
                             </a>
-                            <a href="https://www.linkedin.com/in/samjunior-mavetera-236b4338b/" target='_blank' className="px-4 py-2 rounded-lg border border-white/20 hover:border-cyan-400">
+                            <a href="https://www.linkedin.com/in/sam-junior-mavetera/" target='_blank' className="px-4 py-2 rounded-lg border border-white/20 hover:border-cyan-400">
                                  <img src={linkedin} alt="" className='h-7 w-7 inline mr-1'/>
                                 LinkedIn
                             </a>
