@@ -75,13 +75,13 @@ const Projects = () => {
                     </div>
                     
                     <div className="mt-4 flex gap-3">
-                        <a href={project.links.live} target='_blank' className="px-4 py-2 rounded-lg bg-white text-black font-medium">
+                        <a href={project.links.live} target='_blank' className="px-4 py-2 rounded-lg border text-black hover:border-cyan-400 bg-slate-200 font-medium">
                         <img src={navigateIcon} alt="" className='h-7 w-7 inline mr-1'/>
                         {/* <ExternalLink size={20}/> */}
                             
                             Live Demo
                         </a>
-                        <a href={project.links.github} target='_blank' className="px-4 py-2 rounded-lg border border-white/20 text-white hover:border-cyan-400">
+                        <a href={project.links.github} target='_blank' className="px-4 py-2 rounded-lg border border-white/20 text-white hover:border-cyan-400 cursor-not-allowed">
                         <img src={githubIcon} alt="" className='h-7 w-7 inline mr-1'/>
                         GitHub
                         </a>
