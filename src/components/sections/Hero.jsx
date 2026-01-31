@@ -12,7 +12,9 @@ const Hero = () => {
                 <p className='mt-6 text-gray-400 max-w-xl'>I build secure, scalable, production-ready web applications using Spring Boot and React.</p>
                 <div className='mt-4'>
                     <a href='#projects' className='px-6 mr-4 py-3 rounded-lg bg-cyan-500 text-black font-semibold'>View Projects</a>
-                    <a href='#contact' className='px-6 py-3 rounded-lg border border-white/20 hover:border-cyan-400'>Contact Me</a>
+                    <a href='#contact' className='px-6 py-3 mr-4 rounded-lg border border-white/20 hover:border-cyan-400'>Contact Me</a>
+                    <a target='_blank' href='https://drive.google.com/file/d/1F2A7g7-IKRI9yDr3BMp9ogj7zuk_Nwh-/view?usp=drive_link' className='px-6 mr-4 py-3 rounded-lg bg-cyan-500 text-black font-semibold'>Resume</a>
+
                 </div>
             </div>
             <div className='flex justify-center'>
