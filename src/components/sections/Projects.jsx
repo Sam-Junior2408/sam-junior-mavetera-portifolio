@@ -35,9 +35,9 @@ const Projects = () => {
             image:'',
             technologies: ['Spring Boot', 'React', 'Tailwind CSS', 'MYSQL', 'REST API'],
             links:{
-                live:'',
+                live:'https://employee-crud-management-system-ui.vercel.app/',
                 github: 'github link',
-                bitbucket: ''
+                bitbucket: 'https://bitbucket.org/sam-junior-mavetera/employee-crud-management-system-ui/src/main/'
             }
         },
 
