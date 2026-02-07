@@ -55,6 +55,19 @@ const Projects = () => {
                 github: 'github link',
                 bitbucket: 'https://bitbucket.org/sam-junior-mavetera/sam-junior-mavetera-portifolio/src/main/'
             }
+        },
+
+        {
+            id:4,
+            name:'Shipping and Logistics Management System (In progress)',
+            description:    'A full-stack web application designed to manage end-to-end logistics operations including shipment requests, order tracking, route planning, fleet management, billing, and role-based access control. The system supports multiple user roles such as Admin, Operations Staff, and Customers, with secure authentication and authorization.',
+            image:'',
+            technologies: ['Spring Boot', 'React', 'Tailwind CSS', 'JavaScript', 'Spring Security (JWT)', 'PostgreSQL', 'REST APIs'],
+            links:{
+                live:'',
+                github: '',
+                bitbucket: ''
+            }
         }
     ]
 
