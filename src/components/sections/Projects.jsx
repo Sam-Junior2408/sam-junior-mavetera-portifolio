@@ -64,9 +64,9 @@ const Projects = () => {
             image:'',
             technologies: ['Spring Boot', 'React', 'Tailwind CSS', 'JavaScript', 'Spring Security (JWT)', 'PostgreSQL', 'REST APIs'],
             links:{
-                live:'',
+                live:'https://shipping-and-logistics-management-s.vercel.app/',
                 github: '',
-                bitbucket: ''
+                bitbucket: 'https://bitbucket.org/sam-junior-mavetera/shipping-and-logistics-management-system-ui/src/main/'
             }
         }
     ]
@@ -97,10 +97,10 @@ const Projects = () => {
                             
                             Live Demo
                         </a>
-                        <a href={project.links.github} target='_blank' className="px-4 py-2 rounded-lg border border-white/20 text-white hover:border-cyan-400 cursor-not-allowed">
+                        {/* <a href={project.links.github} target='_blank' className="px-4 py-2 rounded-lg border border-white/20 text-white hover:border-cyan-400 cursor-not-allowed">
                         <img src={githubIcon} alt="" className='h-7 w-7 inline mr-1'/>
                         GitHub
-                        </a>
+                        </a> */}
                         <a href={project.links.bitbucket} target='_blank' className="px-4 py-2 rounded-lg border border-white/20 text-white hover:border-cyan-400">
                         <img src={bitBucketIcon} alt="" className='h-7 w-7 inline mr-1'/>
                         
