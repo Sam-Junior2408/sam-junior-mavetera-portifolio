@@ -12,7 +12,7 @@ const Skills = () => {
                 </div>
                 <div className="p-6 rounded-xl bg-white/10 hover:scale-105 transition transform duration-300">
                     <h3 className="font-semibold text-cyan-400">Frontend</h3>
-                    <p className="mt-3 text-gray-400">React, Javascript, Vite, Tailwind CSS</p>
+                    <p className="mt-3 text-gray-400">React, Javascript, Typescript, Vite, Tailwind CSS</p>
                 </div>
                 <div className="p-6 rounded-xl bg-white/10 hover:scale-105 transition transform duration-300">
                     <h3 className="font-semibold text-cyan-400">DevOps & Tools</h3>
