@@ -1,10 +1,46 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/" href="/src/assets/profile.jpeg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>sam-junior-mavetera-portfolio</title>
+    <link rel="icon" type="image/jpeg" href="/src/assets/profile.jpeg" />
+
+    <title>Sam Junior Mavetera — Full Stack Software Engineer</title>
+    <meta
+      name="description"
+      content="Full Stack Software Engineer building secure, scalable, production-ready systems with Spring Boot, Kafka, Kubernetes, and React."
+    />
+    <meta name="theme-color" content="#0B0F19" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sam Junior Mavetera — Full Stack Software Engineer" />
+    <meta
+      property="og:description"
+      content="Spring Boot microservices, Kafka, Kubernetes, and React. Secure, scalable, production-ready systems."
+    />
+    <meta property="og:url" content="https://sam-junior-mavetera-portifolio.vercel.app/" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Apply the stored theme before first paint so there is no light/dark flash. -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('sjm-theme');
+          var theme = stored === 'light' || stored === 'dark' ? stored : 'dark';
+          document.documentElement.classList.toggle('dark', theme === 'dark');
+          document.documentElement.style.colorScheme = theme;
+        } catch (e) {
+          /* private mode / storage disabled — fall through to the dark default */
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

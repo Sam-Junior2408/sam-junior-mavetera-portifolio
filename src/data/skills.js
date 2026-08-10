@@ -1,0 +1,96 @@
+import {
+  Server,
+  Layout,
+  Database,
+  Radio,
+  Cloud,
+  Wrench,
+} from 'lucide-react'
+
+export const skillGroups = [
+  {
+    id: 'backend',
+    title: 'Backend',
+    icon: Server,
+    blurb: 'Secure, layered services with clean domain boundaries.',
+    items: [
+      'Java',
+      'Spring Boot',
+      'Spring Security (JWT)',
+      'Spring Data JPA',
+      'REST APIs',
+      'Microservices',
+      'MapStruct',
+      'Maven',
+    ],
+  },
+  {
+    id: 'frontend',
+    title: 'Frontend',
+    icon: Layout,
+    blurb: 'Responsive, accessible interfaces that ship fast.',
+    items: [
+      'React',
+      'JavaScript',
+      'TypeScript',
+      'Tailwind CSS',
+      'Vite',
+      'React Router',
+      'React Native (Expo)',
+    ],
+  },
+  {
+    id: 'data',
+    title: 'Databases & Migrations',
+    icon: Database,
+    blurb: 'Versioned schemas that move safely between environments.',
+    items: ['PostgreSQL', 'MySQL', 'Flyway', 'JPA / Hibernate', 'SQL'],
+  },
+  {
+    id: 'messaging',
+    title: 'Messaging & Streaming',
+    icon: Radio,
+    blurb: 'Event-driven flows that keep services decoupled.',
+    items: ['Apache Kafka', 'Event-Driven Architecture', 'Async Processing'],
+  },
+  {
+    id: 'devops',
+    title: 'DevOps & Cloud',
+    icon: Cloud,
+    blurb: 'From container image to a running cluster.',
+    items: [
+      'Docker',
+      'Docker Compose',
+      'Kubernetes',
+      'Helm',
+      'Nginx',
+      'AWS EC2',
+      'CI/CD',
+      'Render',
+      'Vercel',
+    ],
+  },
+  {
+    id: 'tooling',
+    title: 'Storage & Tooling',
+    icon: Wrench,
+    blurb: 'The everyday kit around the codebase.',
+    items: ['MinIO (S3)', 'Git', 'Bitbucket', 'GitHub', 'Postman', 'Swagger / OpenAPI', 'IntelliJ IDEA'],
+  },
+]
+
+// Rendered in the top ticker.
+export const marqueeTech = [
+  'Spring Boot',
+  'React',
+  'Kafka',
+  'Kubernetes',
+  'Helm',
+  'Docker',
+  'PostgreSQL',
+  'MySQL',
+  'Flyway',
+  'MinIO',
+  'Tailwind CSS',
+  'Microservices',
+]

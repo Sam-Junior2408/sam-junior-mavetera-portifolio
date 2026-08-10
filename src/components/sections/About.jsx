@@ -1,13 +1,49 @@
-import React from 'react'
+import { Boxes, GitBranch, ShieldCheck, Workflow } from 'lucide-react'
+import SectionHeading from '../ui/SectionHeading'
 
-const About = () => {
-  return (
-    <div id='about' className='py-24 px-6 max-w-5xl mx-auto'>
-        <h1 className='text-3xl font-bold text-white'>About Me</h1>
-        <p className='mt-6 text-gray-400 leading-relaxed'>I am a software engineer focused on building real-world systems with clean architecture, security best practices, and scalable backend APIs. I enjoy turning complex problems into elegant, maintainable solutions.</p>
+const principles = [
+  {
+    icon: Boxes,
+    title: 'Clean architecture',
+    text: 'Layered services with clear domain boundaries, so features land without ripple effects.',
+  },
+  {
+    icon: ShieldCheck,
+    title: 'Security first',
+    text: 'JWT auth, role-scoped endpoints, and validated inputs baked in from the first commit.',
+  },
+  {
+    icon: Workflow,
+    title: 'Event-driven',
+    text: 'Kafka topics keep services decoupled and resilient when one of them has a bad day.',
+  },
+  {
+    icon: GitBranch,
+    title: 'Ship it properly',
+    text: 'Versioned schemas with Flyway, containers with Docker, orchestration with Kubernetes and Helm.',
+  },
+]
 
+const About = () => (
+  <section id="about" className="section">
+    <SectionHeading
+      eyebrow="About"
+      title="Turning complex problems into maintainable systems"
+      subtitle="I'm a software engineer focused on building real-world systems with clean architecture, security best practices, and scalable backend APIs. Lately most of my time goes into distributed Spring Boot services — designing the contracts between them, the events they exchange, and the pipeline that gets them running in a cluster."
+    />
+
+    <div className="mt-12 grid gap-4 sm:grid-cols-2">
+      {principles.map(({ icon: Icon, title, text }) => (
+        <div key={title} className="card card-hover p-6">
+          <div className="grid h-11 w-11 place-items-center rounded-xl bg-accent/10 text-accent">
+            <Icon size={20} />
+          </div>
+          <h3 className="mt-4 font-semibold text-ink">{title}</h3>
+          <p className="mt-2 text-sm leading-relaxed text-ink-soft">{text}</p>
+        </div>
+      ))}
     </div>
-  )
-}
+  </section>
+)
 
 export default About

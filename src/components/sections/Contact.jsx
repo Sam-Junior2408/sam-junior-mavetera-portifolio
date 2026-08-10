@@ -1,82 +1,120 @@
-import React from 'react'
-import githubIcon from '../../assets/github.png'
+import { Github, Linkedin, Mail, MessageCircle, Phone, Send } from 'lucide-react'
 import bitBucketIcon from '../../assets/bitbucket.png'
-import navigateIcon from '../../assets/navigate.png'
-import phone from '../../assets/phone-call.png'
-import mail from '../../assets/mail.png'
-import sendmail from '../../assets/sendmail.png'
-import whatsapp from '../../assets/whatsapp.png'
-import linkedin from '../../assets/linkedin.png'
+import SectionHeading from '../ui/SectionHeading'
 
+const details = [
+  { icon: Phone, label: '+263 788 166 214', href: 'tel:+263788166214' },
+  { icon: MessageCircle, label: 'WhatsApp', href: 'https://wa.me/263788166214' },
+  { icon: Mail, label: 'ghsam2408@gmail.com', href: 'mailto:ghsam2408@gmail.com' },
+]
+
+const profiles = [
+  { icon: Github, label: 'GitHub', href: 'https://github.com/ghsam-2408' },
+  {
+    img: bitBucketIcon,
+    label: 'Bitbucket',
+    href: 'https://bitbucket.org/sam-junior-mavetera/workspace/overview/',
+  },
+  { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/sam-junior-mavetera/' },
+]
+
+const inputClass =
+  'w-full rounded-xl border border-border bg-surface-2 px-4 py-3 text-sm text-ink placeholder:text-ink-faint transition focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/30'
 
 const Contact = () => {
+  // No backend wired up yet — hand the message to the visitor's mail client.
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    const form = new FormData(event.currentTarget)
+    const name = form.get('name')
+    const email = form.get('email')
+    const message = form.get('message')
+    const body = `${message}\n\n— ${name} (${email})`
+    window.location.href = `mailto:ghsam2408@gmail.com?subject=${encodeURIComponent(
+      `Portfolio enquiry from ${name}`
+    )}&body=${encodeURIComponent(body)}`
+  }
 
   return (
-    <div id='contact' className='py-24 px-6 bg-white/5'>
-        <div className='max-w-6xl mx-auto'>
-            <h2 className='text-3xl font-bold text-white text-center'>
-                Let’s Connect
-            </h2>
-            <p className='mt-4 text-gray-400 text-center'>Open to opportunities, collaborations, and meaningful conversations.</p>
-            <div className='mt-12 grid md:grid-cols-2 gap-12'>
-                {/* contact details */}
-                <div className='space-y-6'>
-                    <div className='p-6 bg-white/10 rounded-xl'>
-                        <h3 className="text-xl font-semibold text-cyan-400">Contact Details</h3>
-                            <ul className="mt-4 space-y-3 text-gray-300">
-                            <li>
-                                 <img src={phone} alt="" className='h-7 w-7 inline mr-1'/>
-                                                    
-                                <a href="tel:+263788166214" target='_blank' className="hover:text-cyan-400">+263 788 166 214</a></li>
-                            <li>
-                                 <img src={whatsapp} alt="" className='h-7 w-7 inline mr-1'/>
+    <section id="contact" className="border-t border-border bg-surface/40">
+      <div className="section">
+        <SectionHeading
+          eyebrow="Contact"
+          title="Let's Connect"
+          subtitle="Open to opportunities, collaborations, and meaningful conversations."
+          align="center"
+        />
 
-                                <a href="https://wa.me/263788166214" target="_blank" className="hover:text-cyan-400">+263 788 166 214</a></li>
-                            <li>
-                                 <img src={mail} alt="" className='h-7 w-7 inline mr-1'/>
-
-                                <a href="mailto:ghsam2408@gmail.com" target='_blank' className="hover:text-cyan-400">ghsam2408@gmail.com</a></li>
-                        </ul>
-                    </div>
-
-                    <div className="p-6 bg-white/10 rounded-xl">
-                        <h3 className="text-xl font-semibold text-cyan-400">Find Me Online</h3>
-                        <div className="mt-4 flex gap-4 flex-wrap">
-                            <a href="https://github.com/ghsam-2408" target='_blank' className="px-4 py-2 rounded-lg border border-white/20 hover:border-cyan-400">
-                                 <img src={githubIcon} alt="" className='h-7 w-7 inline mr-1'/>
-                                GitHub
-                            </a>
-                            <a href="https://bitbucket.org/sam-junior-mavetera/workspace/overview/" target='_blank' className="px-4 py-2 rounded-lg border border-white/20 hover:border-cyan-400">
-                                 <img src={bitBucketIcon} alt="" className='h-7 w-7 inline mr-1'/>
-                                Bitbucket
-                            </a>
-                            <a href="https://www.linkedin.com/in/sam-junior-mavetera/" target='_blank' className="px-4 py-2 rounded-lg border border-white/20 hover:border-cyan-400">
-                                 <img src={linkedin} alt="" className='h-7 w-7 inline mr-1'/>
-                                LinkedIn
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-
-                {/* contact form  */}
-                <div className="p-6 bg-white/10 rounded-xl">
-                    <h3 className="text-xl font-semibold text-cyan-400">Send a Message</h3>
-                    <form className="mt-6 space-y-4">
-                        <input type="text" placeholder="Your Name" className="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/10 focus:outline-none focus:border-cyan-400" />
-                        <input type="email" placeholder="Your Email" className="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/10 focus:outline-none focus:border-cyan-400" />
-                        <textarea rows="4" placeholder="Your Message" className="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/10 focus:outline-none focus:border-cyan-400"></textarea>
-                        <button type="submit" className="w-full px-6 py-3 rounded-lg bg-cyan-500 text-black font-semibold">
-                            <img src={sendmail} alt="" className='h-7 w-7 inline mr-1'/>
-                            Send Message
-                        </button>
-                    </form>
-                </div>
-
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
+          <div className="space-y-6">
+            <div className="card p-6">
+              <h3 className="font-semibold text-ink">Contact Details</h3>
+              <ul className="mt-4 space-y-3">
+                {details.map(({ icon: Icon, label, href }) => (
+                  <li key={label}>
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="group flex items-center gap-3 text-sm text-ink-soft transition hover:text-accent"
+                    >
+                      <span className="grid h-9 w-9 place-items-center rounded-lg bg-accent/10 text-accent transition group-hover:bg-accent group-hover:text-accent-ink">
+                        <Icon size={16} />
+                      </span>
+                      {label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
-        </div>
 
-    </div>
+            <div className="card p-6">
+              <h3 className="font-semibold text-ink">Find Me Online</h3>
+              <div className="mt-4 flex flex-wrap gap-3">
+                {profiles.map(({ icon: Icon, img, label, href }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn-outline !py-2.5 text-sm"
+                  >
+                    {Icon ? <Icon size={16} /> : <img src={img} alt="" className="h-4 w-4" />}
+                    {label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <form onSubmit={handleSubmit} className="card space-y-4 p-6">
+            <h3 className="font-semibold text-ink">Send a Message</h3>
+            <input name="name" type="text" required placeholder="Your Name" className={inputClass} />
+            <input
+              name="email"
+              type="email"
+              required
+              placeholder="Your Email"
+              className={inputClass}
+            />
+            <textarea
+              name="message"
+              rows="5"
+              required
+              placeholder="Your Message"
+              className={inputClass}
+            />
+            <button type="submit" className="btn-primary w-full">
+              <Send size={17} />
+              Send Message
+            </button>
+            <p className="text-center text-xs text-ink-faint">
+              This opens your email client with the message pre-filled.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
   )
 }
 

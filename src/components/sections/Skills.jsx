@@ -1,30 +1,39 @@
-import React from 'react'
+import SectionHeading from '../ui/SectionHeading'
+import { skillGroups } from '../../data/skills'
 
-const Skills = () => {
-  return (
-    <div id='skills' className='py-24 px-6 bg-white/5'>
-        <div className='max-w-6xl mx-auto'>
-            <h2 className='text-3xl font-bold text-white'>Skills</h2>
-            <div className='grid md:grid-cols-3 gap-6 mt-10'>
-                <div className="p-6 rounded-xl bg-white/10 hover:scale-105 transition transform duration-300">
-                    <h3 className="font-semibold text-cyan-400">Backend</h3>
-                    <p className="mt-3 text-gray-400">Spring Boot, Spring Security, JPA, REST APIs</p>
-                </div>
-                <div className="p-6 rounded-xl bg-white/10 hover:scale-105 transition transform duration-300">
-                    <h3 className="font-semibold text-cyan-400">Frontend</h3>
-                    <p className="mt-3 text-gray-400">React, Javascript, Typescript, Vite, Tailwind CSS</p>
-                </div>
-                <div className="p-6 rounded-xl bg-white/10 hover:scale-105 transition transform duration-300">
-                    <h3 className="font-semibold text-cyan-400">DevOps & Tools</h3>
-                    <p className="mt-3 text-gray-400">Docker, Postman, Git, Render, Vercel</p>
-                </div>
+const Skills = () => (
+  <section id="skills" className="border-y border-border bg-surface/40">
+    <div className="section">
+      <SectionHeading
+        eyebrow="Skills"
+        title="The stack I build with"
+        subtitle="From the API contract down to the container that runs it — here's what I reach for day to day."
+      />
 
+      <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {skillGroups.map(({ id, title, icon: Icon, blurb, items }) => (
+          <div key={id} className="card card-hover flex flex-col p-6">
+            <div className="flex items-center gap-3">
+              <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-accent to-violet text-white">
+                <Icon size={19} />
+              </div>
+              <h3 className="font-semibold text-ink">{title}</h3>
             </div>
-            
-        </div>
 
+            <p className="mt-3 text-sm leading-relaxed text-ink-soft">{blurb}</p>
+
+            <ul className="mt-5 flex flex-wrap gap-2">
+              {items.map((item) => (
+                <li key={item} className="chip hover:border-accent/50 hover:text-accent">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
     </div>
-  )
-}
+  </section>
+)
 
 export default Skills
