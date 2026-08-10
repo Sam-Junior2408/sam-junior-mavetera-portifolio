@@ -49,9 +49,7 @@ const Navbar = () => {
             href="#top"
             className="flex items-center gap-2 text-sm font-bold text-ink transition hover:text-accent"
           >
-            <span className="grid h-7 w-7 place-items-center rounded-lg bg-gradient-to-br from-accent to-violet text-xs font-black text-white">
-              SJ
-            </span>
+            <span className="text-sm font-black text-accent">SJ</span>
             Sam Junior
           </a>
 
