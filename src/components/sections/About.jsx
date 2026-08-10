@@ -35,9 +35,7 @@ const About = () => (
     <div className="mt-12 grid gap-4 sm:grid-cols-2">
       {principles.map(({ icon: Icon, title, text }) => (
         <div key={title} className="card card-hover p-6">
-          <div className="grid h-11 w-11 place-items-center rounded-xl bg-accent/10 text-accent">
-            <Icon size={20} />
-          </div>
+          <Icon size={22} className="text-accent" />
           <h3 className="mt-4 font-semibold text-ink">{title}</h3>
           <p className="mt-2 text-sm leading-relaxed text-ink-soft">{text}</p>
         </div>

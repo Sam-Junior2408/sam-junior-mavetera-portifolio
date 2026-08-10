@@ -14,9 +14,7 @@ const Skills = () => (
         {skillGroups.map(({ id, title, icon: Icon, blurb, items }) => (
           <div key={id} className="card card-hover flex flex-col p-6">
             <div className="flex items-center gap-3">
-              <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-accent to-violet text-white">
-                <Icon size={19} />
-              </div>
+              <Icon size={20} className="shrink-0 text-accent" />
               <h3 className="font-semibold text-ink">{title}</h3>
             </div>
 
