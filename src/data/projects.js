@@ -14,7 +14,7 @@ export const projects = [
     status: 'In progress',
     featured: true,
     description:
-      'A microservices recruitment platform covering the full hiring lifecycle — job posting, candidate matching, coding assessments, live interviews, and offer management. Eight Spring Boot services sit behind an API gateway, communicate over Kafka, and are consumed by a React web app and a React Native mobile app.',
+      'A microservices recruitment platform covering the full hiring lifecycle - job posting, candidate matching, coding assessments, live interviews, and offer management. Eight Spring Boot services sit behind an API gateway, communicate over Kafka, and are consumed by a React web app and a React Native mobile app.',
     highlights: [
       '8 independently deployed Spring Boot services behind a Spring Cloud Gateway',
       'Kafka events decouple assessments, recruitment, and notifications',

@@ -7,7 +7,7 @@ const Skills = () => (
       <SectionHeading
         eyebrow="Skills"
         title="The stack I build with"
-        subtitle="From the API contract down to the container that runs it — here's what I reach for day to day."
+        subtitle="From the API contract down to the container that runs it - here's what I reach for day to day."
       />
 
       <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">

@@ -148,7 +148,7 @@ const Projects = () => {
       <SectionHeading
         eyebrow="Work"
         title="Featured Projects"
-        subtitle="A mix of production-shaped systems and focused builds — each one solving a real problem end to end."
+        subtitle="A mix of production-shaped systems and focused builds - each one solving a real problem end to end."
       />
 
       <div className="mt-12 space-y-6">

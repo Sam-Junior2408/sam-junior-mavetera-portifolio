@@ -29,7 +29,7 @@ const About = () => (
     <SectionHeading
       eyebrow="About"
       title="Turning complex problems into maintainable systems"
-      subtitle="I'm a software engineer focused on building real-world systems with clean architecture, security best practices, and scalable backend APIs. Lately most of my time goes into distributed Spring Boot services — designing the contracts between them, the events they exchange, and the pipeline that gets them running in a cluster."
+      subtitle="I'm a software engineer focused on building real-world systems with clean architecture, security best practices, and scalable backend APIs. Lately most of my time goes into distributed Spring Boot services - designing the contracts between them, the events they exchange, and the pipeline that gets them running in a cluster."
     />
 
     <div className="mt-12 grid gap-4 sm:grid-cols-2">
