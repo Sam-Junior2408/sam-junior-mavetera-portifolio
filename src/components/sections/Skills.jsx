@@ -11,8 +11,11 @@ const Skills = () => (
       />
 
       <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-        {skillGroups.map(({ id, title, icon: Icon, blurb, items }) => (
-          <div key={id} className="card card-hover flex flex-col p-6">
+        {skillGroups.map(({ id, title, icon: Icon, blurb, items, wide }) => (
+          <div
+            key={id}
+            className={`card card-hover flex flex-col p-6 ${wide ? 'md:col-span-2 lg:col-span-3' : ''}`}
+          >
             <div className="flex items-center gap-3">
               <Icon size={20} className="shrink-0 text-accent" />
               <h3 className="font-semibold text-ink">{title}</h3>
@@ -21,9 +24,14 @@ const Skills = () => (
             <p className="mt-3 text-sm leading-relaxed text-ink-soft">{blurb}</p>
 
             <ul className="mt-5 flex flex-wrap gap-2">
-              {items.map((item) => (
-                <li key={item} className="chip hover:border-accent/50 hover:text-accent">
-                  {item}
+              {items.map(({ name, icon: ItemIcon }) => (
+                <li key={name} className="chip group hover:border-accent/50 hover:text-accent">
+                  <ItemIcon
+                    size={13}
+                    aria-hidden="true"
+                    className="shrink-0 text-ink-faint transition group-hover:text-accent"
+                  />
+                  {name}
                 </li>
               ))}
             </ul>

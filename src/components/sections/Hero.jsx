@@ -9,7 +9,7 @@ const socials = [
 
 const stats = [
   { value: '5+', label: 'Projects shipped' },
-  { value: '8', label: 'Microservices built' },
+  { value: '20+', label: 'Microservices built' },
   { value: 'Java · React', label: 'Core stack' },
 ]
 
@@ -39,7 +39,8 @@ const Hero = () => (
           <p className="mt-5 max-w-xl text-base leading-relaxed text-ink-soft sm:text-lg">
             I build secure, scalable, production-ready systems - Spring Boot
             microservices talking over Kafka, containerised with Docker and
-            Kubernetes, with React front ends that stay fast and accessible.
+            Kubernetes, with React and React Native front ends that stay fast
+            and accessible.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">

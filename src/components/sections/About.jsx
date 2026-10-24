@@ -15,12 +15,12 @@ const principles = [
   {
     icon: Workflow,
     title: 'Event-driven',
-    text: 'Kafka topics keep services decoupled and resilient when one of them has a bad day.',
+    text: 'Kafka and RabbitMQ keep services decoupled and resilient when one of them has a bad day.',
   },
   {
     icon: GitBranch,
     title: 'Ship it properly',
-    text: 'Versioned schemas with Flyway, containers with Docker, orchestration with Kubernetes and Helm.',
+    text: 'Versioned schemas with Flyway, containers with Docker, orchestration with Kubernetes, and Prometheus with Grafana watching it all.',
   },
 ]
 
