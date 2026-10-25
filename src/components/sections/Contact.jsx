@@ -1,10 +1,11 @@
-import { Github, Linkedin, Mail, MessageCircle, Phone, Send } from 'lucide-react'
+import { Github, Linkedin, Mail, Phone, Send } from 'lucide-react'
 import bitBucketIcon from '../../assets/bitbucket.png'
+import whatsAppIcon from '../../assets/whatsapp.png'
 import SectionHeading from '../ui/SectionHeading'
 
 const details = [
   { icon: Phone, label: '+263 788 166 214', href: 'tel:+263788166214' },
-  { icon: MessageCircle, label: 'WhatsApp', href: 'https://wa.me/263788166214' },
+  { img: whatsAppIcon, label: '+263 788 166 214', note: 'WhatsApp', href: 'https://wa.me/263788166214' },
   { icon: Mail, label: 'ghsam2408@gmail.com', href: 'mailto:ghsam2408@gmail.com' },
 ]
 
@@ -50,18 +51,27 @@ const Contact = () => {
             <div className="card p-6">
               <h3 className="font-semibold text-ink">Contact Details</h3>
               <ul className="mt-4 space-y-3">
-                {details.map(({ icon: Icon, label, href }) => (
-                  <li key={label}>
+                {details.map(({ icon: Icon, img, label, note, href }) => (
+                  <li key={href}>
                     <a
                       href={href}
                       target="_blank"
                       rel="noreferrer"
                       className="group flex items-center gap-3 text-sm text-ink-soft transition hover:text-accent"
                     >
-                      <span className="grid h-9 w-9 place-items-center rounded-lg bg-accent/10 text-accent transition group-hover:bg-accent group-hover:text-accent-ink">
-                        <Icon size={16} />
+                      {Icon ? (
+                        <span className="grid h-9 w-9 place-items-center rounded-lg bg-accent/10 text-accent transition group-hover:bg-accent group-hover:text-accent-ink">
+                          <Icon size={16} />
+                        </span>
+                      ) : (
+                        <span className="grid h-9 w-9 place-items-center rounded-lg bg-[#25D366]/10 transition group-hover:bg-[#25D366]/20">
+                          <img src={img} alt="" className="h-[18px] w-[18px]" />
+                        </span>
+                      )}
+                      <span>
+                        {label}
+                        {note && <span className="ml-2 text-xs text-ink-faint">{note}</span>}
                       </span>
-                      {label}
                     </a>
                   </li>
                 ))}
