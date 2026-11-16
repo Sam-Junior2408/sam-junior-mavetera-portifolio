@@ -15,16 +15,19 @@ import SectionHeading from '../ui/SectionHeading'
 import { certifications } from '../../data/certifications'
 
 // Certificate files live in src/assets/certificates, named after the entry's id
-// (e.g. potraz-ctf.pdf or potraz-ctf.png). A card becomes clickable once its file exists.
+// (e.g. potraz-ctf.pdf or potraz-ctf.png), unless an entry specifies certificateFile.
+// A card becomes clickable once its file exists.
 const certificateFiles = import.meta.glob('../../assets/certificates/*.{pdf,png,jpg,jpeg,webp}', {
   eager: true,
   query: '?url',
   import: 'default',
 })
 
-const certificateFor = (id) => {
+const certificateFor = (id, certificateFile) => {
   const match = Object.entries(certificateFiles).find(([path]) =>
-    path.split('/').pop().startsWith(`${id}.`),
+    certificateFile
+      ? path.split('/').pop() === certificateFile
+      : path.split('/').pop().startsWith(`${id}.`),
   )
   return match && { url: match[1], isPdf: match[0].toLowerCase().endsWith('.pdf') }
 }
@@ -195,12 +198,13 @@ const Certifications = () => {
             rank,
             year,
             icon: Icon,
+            certificateFile,
             description,
             topics,
             certificateId,
             credentialUrl,
           }) => {
-            const certificate = certificateFor(id)
+            const certificate = certificateFor(id, certificateFile)
             const openViewer = () => setOpen({ name, certificate, certificateId, credentialUrl })
             const clickProps = certificate
               ? {

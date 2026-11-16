@@ -9,8 +9,28 @@ import { Flag, Network } from 'lucide-react'
  */
 export const certifications = [
   {
+    id: 'ccna-introduction-to-networks',
+    name: 'CCNA: Introduction to Networks',
+    issuer: 'Cisco Networking Academy',
+    provider: 'University of Zimbabwe Computer Science',
+    status: 'Earned',
+    year: 2025,
+    icon: Network,
+    certificateFile: 'CCNA1_Certificate.pdf',
+    topics: [
+      'Network fundamentals',
+      'Network access',
+      'IP connectivity',
+      'IP services',
+      'Network security basics',
+    ],
+    description:
+      'Completed the introductory networking course through the Cisco Networking Academy program.',
+    credentialUrl: null,
+  },
+  {
     id: 'ccna',
-    name: 'CCNA - Cisco Certified Network Associate',
+    name: 'CCNA: Switching, Routing, and Wireless Essentials',
     issuer: 'Cisco',
     provider: 'University of Zimbabwe',
     exam: 'Exam 200-301',
